@@ -1,0 +1,5 @@
+%{
+  "circuits_i2c": {:hex, :circuits_i2c, "0.2.0", "e235556a9f09b757df5e778f46e23fe49fe17e71ee6bc206d90524e993fee834", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
+  "elixir_make": {:hex, :elixir_make, "0.4.2", "332c649d08c18bc1ecc73b1befc68c647136de4f340b548844efc796405743bf", [:mix], [], "hexpm"},
+  "is31fl3731": {:git, "https://github.com/mobileoverlord/is31fl3731.git", "0b083a8006155c5ecd02092d96c7bfe59205ed24", []},
+}
