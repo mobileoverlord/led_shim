@@ -21,7 +21,8 @@ defmodule LEDShim.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:is31fl3731, github: "mobileoverlord/is31fl3731"}
+      {:is31fl3731, github: "mobileoverlord/is31fl3731"},
+      {:propcheck, "~> 1.0", only: :test}
     ]
   end
 end
