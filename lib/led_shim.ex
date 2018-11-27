@@ -95,8 +95,12 @@ defmodule LEDShim do
     {:noreply, s}
   end
 
-  def handle_call({:set_pixel, pixel, color, brightness}, _from, s) do
+  def handle_call({:set_pixel, pixel, color, brightness}, _from, s) when pixel in 0..27 do
     {:reply, :ok, do_set_pixel(pixel, color, brightness, s)}
+  end
+
+  def handle_call({:set_pixel, _pixel, _color, _brightness}, _from, s) do
+    {:reply, {:error, "Pixel out of LED Shim range of 0..27"}, s}
   end
 
   def handle_call({:set_all, color, brightness}, _from, s) do
